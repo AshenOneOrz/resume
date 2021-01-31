@@ -1,0 +1,412 @@
+@import url('https://fonts.font.im/css?family=Montserrat');
+
+/* 通用部分 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 14px;
+	font-family: 'Montserrat', 'Microsoft YaHei', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: inherit;
+}
+
+a:visited {
+	color: inherit;
+}
+
+#app-container {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+}
+
+/* 头部 */
+header {
+	width: 100%;
+}
+
+.header-contact {
+	flex-direction: column;
+	align-items: center;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+}
+
+.contact-wrapper {
+	margin: 20px 0;
+}
+
+.contact-item {
+	text-justify: center;
+	margin: 0 10px;
+	padding: 5px 10px;
+	font-size: 14px;
+	background-color: #fff;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	color: #313131;
+	transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+	font-weight: 400;
+	/* box-shadow: 0 0 2px #454545; */
+	cursor: default;
+	border: 1px solid #454545;
+}
+
+.contact-item:hover {
+	transform: translate(5px, -5px);
+	color: #55535c;
+	box-shadow: 3px 3px 3px #454545;
+}
+
+.contact-wrapper > span {
+	text-align: center;
+}
+
+/* 中部区域 */
+
+main {
+	height: 100vh;
+	width: 100%;
+}
+
+.section {
+	background-color: rgb(230, 230, 230);
+	margin-bottom: 15px;
+	box-shadow: 0 0 3px #838282;
+	position: relative;
+	padding: 20px;
+	width: 100% !important;
+}
+.head-section {
+	padding: 20px 0 0 0 !important;
+}
+.section::after {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	content: '';
+	/* background-color: #165a81; */
+	transform: translateX(-50%);
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-top: 20px solid #165a81;
+}
+
+.section-title {
+	font-size: 30px;
+	color: #454545;
+	text-align: center;
+	margin: 20px;
+	position: relative;
+	cursor: default;
+}
+.gap {
+	margin-top: 20px !important;
+}
+
+.section-title::after {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	content: '';
+	width: 100px;
+	height: 1px;
+	background-color: #454545;
+	transform: translate(-50%, 10px);
+	transition: all 0.3s cubic-bezier(0.57, 1.1, 0.6, 1.13);
+}
+
+.section-title:hover::after {
+	width: 200px;
+	height: 2px;
+	background-color: rgb(22, 167, 106);
+}
+
+/* 个人介绍区域 */
+
+.info-wrapper {
+	text-align: center;
+}
+
+.info-wrapper > h1 {
+	font-size: 40px;
+	font-weight: 600;
+	color: #313131;
+}
+
+.info-h3 {
+	font-size: 18px;
+	font-weight: 500;
+	color: rgb(179, 179, 179);
+}
+
+.info-h3 > span {
+	padding: 0 10px;
+
+	color: #454545;
+}
+
+/*  
+.info-wrapper {
+	padding: 20px 50px;
+	display: flex;
+}
+
+.info-wrapper > div {
+	padding: 20px;
+}
+
+.info-left {
+	width: 30%;
+	background-color: rgb(231, 231, 231);
+	margin-right: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+
+.info-left > div {
+	text-align: center;
+}
+
+.info-title-wrapper {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.info-title {
+	cursor: default;
+	font-size: 18px;
+	font-weight: 500;
+	color: #3f3f3f;
+}
+
+.info-title:hover {
+	background-position: top;
+}
+
+.info-item {
+	display: flex;
+	flex-direction: column;
+}
+
+.info-right {
+	width: 70%;
+	background-color: rgb(231, 231, 231);
+}
+
+.info-item-title {
+	font-size: 16px;
+	font-weight: 500;
+	color: #3f3f3f;
+	line-height: 30px;
+	transition: all 0.3s;
+	border: #949494 2px solid;
+	position: relative;
+}
+
+.info-item-title::after,
+.info-item-title::before {
+	content: "";
+	position: absolute;
+	background-color: rgb(231, 231, 231);
+	width: 10px;
+	height: 2px;
+	transform: skew(30deg);
+	transition: all 0.5s ease-in-out;
+}
+
+.info-item-title::after {
+	top: -2px;
+	right: 15%;
+}
+
+.info-item-title::before {
+	bottom: -2px;
+	left: 15%;
+}
+
+.info-item-title:hover::after {
+	right: 70%;
+}
+
+.info-item-title:hover::before {
+	left: 70%;
+} */
+
+/* 每个项目 */
+.project-wrapper {
+	padding: 20px 50px;
+}
+
+.project-item {
+	border-bottom: 1px solid #eee;
+}
+
+.project-item + .project-item {
+	margin-top: 30px;
+}
+
+.item-title-wrapper {
+	display: inline-block;
+	font-size: 20px;
+	color: #fff;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.item-title {
+	border: 2px #313131 solid;
+	cursor: pointer;
+	padding: 5px 15px;
+	transition: all 0.3s ease-in;
+	background-color: #165a81;
+}
+
+.toollip {
+	position: absolute;
+	background-color: rgb(112, 112, 112);
+	color: #fff !important;
+	/*  */
+	font-size: 12px;
+	font-weight: 300;
+	text-align: center;
+	height: 30px;
+	width: 100%;
+	/*  */
+	padding: 5px 15px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	/*  */
+	left: 50%;
+	bottom: 100%;
+	transform: translate(-50%, 10px);
+	opacity: 0;
+	transition: all 0.2s ease-in;
+}
+.item-title-wrapper:hover .item-title {
+	background-position: right;
+	color: #000;
+}
+
+.item-title-wrapper:hover .toollip {
+	opacity: 1;
+	transform: translate(-50%, 0);
+}
+
+.item-content {
+	margin-left: 5px;
+	line-height: 20px;
+	padding: 10px 0;
+	font-size: 14px;
+	color: #454545;
+}
+
+.pc-wrapper {
+	display: grid;
+	grid-gap: 15px;
+	grid-template-rows: 1fr 1fr 2fr;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	text-justify: center;
+}
+.bbs-wrapper {
+	display: grid;
+	grid-gap: 15px;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	text-justify: center;
+}
+
+.cover-pc {
+	width: 38vw;
+}
+
+.media-wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+.cover-media {
+	height: 60vh;
+}
+
+.content-focus {
+	padding: 2px 10px;
+	border-radius: 5px;
+	background-color: #fff;
+	transition: all 0.3s;
+	border: #979797 2px solid;
+	position: relative;
+	cursor: default;
+}
+
+.content-focus:hover {
+	transform: skew(45deg);
+}
+
+.content-focus::after,
+.content-focus::before {
+	content: '';
+	position: absolute;
+	background-color: #165a81;
+	width: 10px;
+	height: 2px;
+	transform: skew(30deg);
+	transition: all 0.5s ease-in-out;
+}
+
+.content-focus::after {
+	top: -2px;
+	right: 15%;
+}
+
+.content-focus::before {
+	bottom: -2px;
+	left: 15%;
+}
+
+.content-focus:hover::after {
+	right: 70%;
+}
+
+.content-focus:hover::before {
+	left: 70%;
+}
+
+.print {
+	padding: 20px;
+	height: 65%;
+}
+
+.print2 {
+	margin-top: 50%;
+	padding: 20px;
+	height: 100vh;
+}
+
+.skills {
+	padding: 20px 50px 0 50px !important;
+}
+
+.cover-media-mrzoe {
+	height: 95%;
+	margin: 0 auto;
+}
